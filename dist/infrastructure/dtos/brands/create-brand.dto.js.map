@@ -1,0 +1,1 @@
+{"version":3,"file":"create-brand.dto.js","sourceRoot":"","sources":["../../../../src/infrastructure/dtos/brands/create-brand.dto.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,6CAA8C;AAC9C,qDAAuD;AAEvD,MAAa,cAAc;CAQ1B;AARD,wCAQC;AADC;IANC,IAAA,qBAAW,EAAC;QACX,WAAW,EAAE,mBAAmB;QAChC,OAAO,EAAE,OAAO;KACjB,CAAC;IACD,IAAA,0BAAQ,GAAE;IACV,IAAA,4BAAU,GAAE;;iDACK"}
