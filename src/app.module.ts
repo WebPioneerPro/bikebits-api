@@ -26,6 +26,10 @@ import { VehiclesModule } from './modules/vehicles/vehicles.module';
         autoLoadEntities: true,
         synchronize: configService.get<boolean>('DB_SYNC'),
         ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+        extra: {
+          // Force IPv4 to avoid IPv6 connection issues
+          family: 4,
+        },
       }),
       inject: [ConfigService],
     }),
