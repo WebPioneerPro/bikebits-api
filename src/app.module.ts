@@ -25,6 +25,7 @@ import { VehiclesModule } from './modules/vehicles/vehicles.module';
         database: configService.get<string>('DB_DATABASE'),
         autoLoadEntities: true,
         synchronize: configService.get<boolean>('DB_SYNC'),
+        ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
       }),
       inject: [ConfigService],
     }),
