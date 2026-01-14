@@ -1,11 +1,7 @@
+import './polyfills';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
-
-// Polyfill for crypto in case it's not available
-if (!global.crypto) {
-  global.crypto = require('crypto').webcrypto;
-}
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
