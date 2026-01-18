@@ -34,6 +34,7 @@ export class ProductsService {
         
         return {
           ...product,
+          price: parseFloat(product.price as any) || 0,
           categoryName: category?.categoryName || 'Unknown Category',
           brandName: brand?.brandName || 'Unknown Brand',
           compatibleVehicleNames: vehicles.map(vehicle => vehicle.vehicleName),
@@ -60,6 +61,7 @@ export class ProductsService {
     
     return {
       ...product,
+      price: parseFloat(product.price as any) || 0,
       categoryName: category?.categoryName || 'Unknown Category',
       brandName: brand?.brandName || 'Unknown Brand',
       compatibleVehicleNames: vehicles.map(vehicle => vehicle.vehicleName),
@@ -82,6 +84,7 @@ export class ProductsService {
     
     return {
       ...product,
+      price: parseFloat(product.price as any) || 0,
       categoryName: category?.categoryName || 'Unknown Category',
       brandName: brand?.brandName || 'Unknown Brand',
       compatibleVehicleNames: vehicles.map(vehicle => vehicle.vehicleName),
