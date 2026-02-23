@@ -8,6 +8,7 @@ import { ProductsModule } from './modules/products/products.module';
 import { CategoriesModule } from './modules/categories/categories.module';
 import { BrandsModule } from './modules/brands/brands.module';
 import { VehiclesModule } from './modules/vehicles/vehicles.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -37,7 +38,8 @@ import { VehiclesModule } from './modules/vehicles/vehicles.module';
     ProductsModule,
     CategoriesModule,
     BrandsModule,
-    VehiclesModule
+    VehiclesModule,
+    AuthModule
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -17,6 +17,7 @@ const products_module_1 = require("./modules/products/products.module");
 const categories_module_1 = require("./modules/categories/categories.module");
 const brands_module_1 = require("./modules/brands/brands.module");
 const vehicles_module_1 = require("./modules/vehicles/vehicles.module");
+const auth_module_1 = require("./modules/auth/auth.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -37,6 +38,10 @@ exports.AppModule = AppModule = __decorate([
                     database: configService.get('DB_DATABASE'),
                     autoLoadEntities: true,
                     synchronize: configService.get('DB_SYNC'),
+                    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+                    extra: {
+                        family: 4,
+                    },
                 }),
                 inject: [config_1.ConfigService],
             }),
@@ -44,7 +49,8 @@ exports.AppModule = AppModule = __decorate([
             products_module_1.ProductsModule,
             categories_module_1.CategoriesModule,
             brands_module_1.BrandsModule,
-            vehicles_module_1.VehiclesModule
+            vehicles_module_1.VehiclesModule,
+            auth_module_1.AuthModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

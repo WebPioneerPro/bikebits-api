@@ -37,6 +37,7 @@ let ProductsService = class ProductsService {
             ]);
             return {
                 ...product,
+                price: parseFloat(product.price) || 0,
                 categoryName: category?.categoryName || 'Unknown Category',
                 brandName: brand?.brandName || 'Unknown Brand',
                 compatibleVehicleNames: vehicles.map(vehicle => vehicle.vehicleName),
@@ -58,6 +59,7 @@ let ProductsService = class ProductsService {
         ]);
         return {
             ...product,
+            price: parseFloat(product.price) || 0,
             categoryName: category?.categoryName || 'Unknown Category',
             brandName: brand?.brandName || 'Unknown Brand',
             compatibleVehicleNames: vehicles.map(vehicle => vehicle.vehicleName),
@@ -77,6 +79,7 @@ let ProductsService = class ProductsService {
         ]);
         return {
             ...product,
+            price: parseFloat(product.price) || 0,
             categoryName: category?.categoryName || 'Unknown Category',
             brandName: brand?.brandName || 'Unknown Brand',
             compatibleVehicleNames: vehicles.map(vehicle => vehicle.vehicleName),
